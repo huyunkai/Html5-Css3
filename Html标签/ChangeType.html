@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>类型转换</title>
+</head>
+<body>
+<script>
+    //整形变量转换成字符串
+    var iNum=123;//定义整数变量
+    var str=iNum.toString();//将蒸熟转换成字符串
+    //alert(str); //显示123；
+    //定义八进制整数
+    var iOctalNum=0345;
+    //定义十六进制整数
+    var iHexNum=0xF1;
+   var SOctalNum=iOctalNum.toString();//将八进制的数转换成字符串形式
+    var SHexNum=iHexNum.toString();//将十六进制的数转换成字符串形式
+//    alert(SOctalNum);
+//    alert(SHexNum);
+    //直接获得二进制、八进制和十六进制的变量值
+    var iNum=123;
+//    alert(iNum.toString(2));
+//    alert(iNum.toString(8));
+//    alert(iNum.toString(16));
+</script>
+<!--将字符串转换成数字-->
+<script>
+    //parseInt 可以将字符创转换成整型值。
+    var iNum1=parseInt("1234xyz");//返回值1234
+    var iNum2=parseInt("0123");//返回83；
+    var iNum3=parseInt("43.4");//返回43；
+    var iNum4=parseInt("false");//返回NaN；
+//    alert(iNum1);//显示1234
+//    alert(iNum2);//显示83；
+//    alert(iNum3);//显示43
+//    alert(iNum4);//显示NaN
+     //使用parseInt函数的基模式将二进制，八进制和十六进制转换成整数
+    var Num1=parseInt("110101",2);//将二进制转换，返回53；
+    var Num2=parseInt("110101",8);//将八进制转换，返回36929；
+    var Num3=parseInt("110101",16);//将十六进制转换，返回1114369；
+    alert(Num1);//显示53；
+    alert(Num2);//显示36929；
+    alert(Num3);//显示1114369；
+</script>
+</body>
+</html>

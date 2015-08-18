@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据基本类型</title>
+</head>
+<body>
+<!--Undefined类型-->
+<script>
+
+   // alert(typeof  abc);
+    if(typeof  abc =="undefined")
+   // alert("abc未定义");
+   var abc;
+    //通过"undefined"值判定name变量是否为Undefined类型。
+    if(typeof abc=="undefined")
+    //alert("name未被初始化");
+</script>
+<!--Boolean 类型-->
+<script>
+    var bYes=true;
+    var bNo=false;
+//    alert(bYes);
+//    alert(bNo);
+    //true相当于1，条件为true;
+//    if(bYes==1)
+//    alert("bYes的值是true")
+//    //false相当于0，条件为false;
+//    if(bNo==0)
+//    alert("bNo的值是false");
+</script>
+<!--Number类型-->
+<script>
+    //八进制数
+    var iOctalNum=0213;
+    //十六进制数
+    var iHexNum=0xFE;
+    //二进制数
+    var byte=101;
+//    alert(iOctalNum);
+//    alert(iHexNum);
+//    alert(parseInt(byte,2).toString(10));
+//    var fNum1=4.313412e8;
+//    alert(fNum1);
+//    var iNum=5.67e-8;
+//    alert(iNum);
+
+</script>
+<!--String 类型-->
+<script>
+    var sName1="未来b手法";
+    var sName2="希望";
+    //使用String的prototype为String对象添加新方法.
+    String.prototype.lenB=function(){
+        //将每个中文替换成**;
+        return this.replace(/[^\x00-\xff]/g,"**");
+    }
+    alert(sName1.lenB());
+</script>
+</body>
+</html>

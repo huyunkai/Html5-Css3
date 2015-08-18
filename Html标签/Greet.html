@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Greet</title>
+    <!--开始编写JavaScript代码-->
+    <script type="text/javascript">
+        //由按钮单击事件调用的函数
+        function greet()
+        {
+            var  name=document.getElementById("name");
+            //如果找到文本框
+            if(name)
+                console.log("Hello  "+name.value);
+        }
+    </script>
+</head>
+<body>
+<script>
+   var p='a';
+    alert(typeof p)
+
+</script>
+
+    <!--用于输入信息的文本框-->
+    <input type="text" id="name"/>
+    <!--调用greet方法的按钮-->
+   <input  type="button" value="Greet" onclick="greet()"/>
+
+</body>
+</html>
