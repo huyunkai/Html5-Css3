@@ -39,9 +39,53 @@
     var Num1=parseInt("110101",2);//将二进制转换，返回53；
     var Num2=parseInt("110101",8);//将八进制转换，返回36929；
     var Num3=parseInt("110101",16);//将十六进制转换，返回1114369；
-    alert(Num1);//显示53；
-    alert(Num2);//显示36929；
-    alert(Num3);//显示1114369；
-</script>
+//    alert(Num1);//显示53；
+//    alert(Num2);//显示36929；
+//    alert(Num3);//显示1114369；
+//使用parseFloat函数所转换的字符串必须以十进制形式表示浮点数，而不能以二进制、八进制、十六进制或其他进制表
+    //示浮点数,对于十六进制的数，如0xAB，parseFloat函数将返回0.
+    var fNum1=parseFloat("1234xyz");//返回1234.0；
+    var fNum2=parseFloat("0xAB");//返回0；
+    var fNum3=parseFloat("22.4");//返回22.4；
+    var fNum4=parseFloat("22.6.12");//返回22.6；
+    var fNum5=parseFloat("0123");//返回123
+    var fNum6=parseFloat("xyz");//返回NaN;
+//    alert(fNum1);//显示1234
+//    alert(fNum2);//显示0
+//    alert(fNum3);//显示22.4
+//    alert(fNum4);//显示22.6
+//    alert(fNum5);//显示123；
+//    alert(fNum6);//显示NaN
+    /*JavaScript支持的3种强制类型转换.
+    * Boolean(value):把value中的值转换成Boolean类型.
+    * Number(value);把value中的饿值转换成数字（整数或浮点数）.
+    * String(value):把value中的值转换成字符串.
+    *如何使用Boolean（Value）强制将value转换成Boolean类型的值。
+    * */
+    //强制转换成Boolean类型
+    var b1=Boolean("");//返回false
+    var b2=Boolean("abc");//返回true(非空字符串都返回true)
+    var b3=Boolean(100);//返回true(非0数都返回true)
+    var b4=Boolean(0);//返回false;
+    var b5=Boolean(null);//返回false
+    var b6=Boolean(new String()); //返回true;
+    var b6=Boolean(new String()); //返回true;
+    //强制转换成Number类型
+    var n1=Number(false);//返回0；
+    var n2=Number(true);//返回1;
+    var n3=Number(undefined);//返回NaN;
+    var n4=Number(null);//返回0；
+    var n5=Number("12.1");//返回12.1
+    var n6=Number("66");//返回66；
+    var n7=Number("12ab");//返回NaN；
+    var n8=Number("new Object()");//返回NaN；
+    //强制转换成String类型
+    var s1=String(null);//返回“null”
+    var s2=String(undefined);//返回“undefined”
+    var s3=String(true);//返回“true”
+    alert(s1); //返回“null”
+    alert(s2); //返回undefined;
+    alert(s3);//返回true
+ </script>
 </body>
 </html>

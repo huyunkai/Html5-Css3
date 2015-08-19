@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>工厂方式</title>
+    <script src="js.js"></script>
+    <script src="FactoryType.js"></script>
+</head>
+<body>
+<script>
+    //alert(GetArray("v1","v2","v3"));
+    //使用createStudent函数创建oStudent1对象。
+    var oStudent1=createStudent('01','赵敏',21);
+    //使用createStudent函数创建oStudent2对象
+    var oStudent2=createStudent('02','BillSmith',21);
+    //  调用oStudent1的study方法
+    oStudent1.study();
+    // 调用oStudent2的study访法
+    oStudent2.study();
+</script>
+</body>
+</html>

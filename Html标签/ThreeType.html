@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获得HTML元素的三种方法</title>
+</head>
+<body>
+    <input type="text" id="my_text"/><p/>
+    <script>
+        //1.getElementsById方法 得到的id属多个性值是不相同的
+        var oText=document.getElementById("my_text");//得到文本框元素
+        oText.value="小超人";//想文本框中赋值
+        alert(oText.value);//得到并显示文本框中的值
+
+    </script>
+<!--2.getElementsByName
+有可能得到多个相同name属性值的HTML元素
+-->
+    <!-- 5个文本框 -->
+    <input type="text" name="text"/><p/>
+    <input type="text" name="text"/><p/>
+    <input type="text" name="text"/><p/>
+    <input type="text" name="text"/><p/>
+    <input type="text" name="text"/><p/>
+    <script>
+    var oTexts=document.getElementsByName("text");
+        //循环为这5个文本框赋值
+        for(var i=0;i<oTexts.length;i++)
+        {
+            oTexts[i].value="three"+i+"";
+        }
+    </script>
+<!--3.getElementsByTagName方法
+可以根据HTML元素的标签来获得一个相同HTML元素的数组
+-->
+    <script>
+        var oInputs=document.getElementsByTagName("input");//获得所有Input对象.
+        var oAllElements=document.getElementsByTagName("*");//获得所有的HTML元素.
+        //循环显示Input对象的type值
+        for(var i=0;i<oInputs.length;i++)
+        {
+            alert(oInputs[i].type);
+        }
+    </script>
+
+</body>
+</html>

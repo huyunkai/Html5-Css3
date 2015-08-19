@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>dom</title>
+    <script type="text/javascript">
+        //显示head标签的内容
+        function showHead()
+        {
+           //得到Html对象
+            var oHtml=document.documentElement;
+            //到Head对象
+            var oHead=oHtml.firstChild;
+            alert(oHead.outerHTML);//显示outerHTML属性的值。
+            alert(oHead.innerHTML);//显示innerHTML属性的值。
+
+        }
+        //显示body标签的内容
+        function showBody()
+        {
+            var oHtml=document.documentElement;
+            var oBody=oHtml.childNodes[1];//得到body对象
+            alert(oBody.outerHTML);//显示outerHTML属性的值。
+            alert(oBody.innerHTML);//显示innerHTML属性的值。
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="showHead()"value="显示head标签的内容"/>
+</p>
+    <input type="button" onclick="showBody()" value="显示body标签的内容"/>
+</body>
+</html>
